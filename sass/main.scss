@@ -1,0 +1,35 @@
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.8em;
+    margin: 0;
+    color: #444;
+    -webkit-text-size-adjust: none;
+
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+
+    &.modalopen {
+        overflow: hidden;
+        position: fixed;
+        max-width: 100%;
+    }
+
+    &.modalopenfixed {
+        position: fixed;
+    }
+
+    
+    img {
+        width: 100%;
+    }
+
+    section {
+        padding: 3em;
+        grid-column: 1 / span 4;
+    }
+
+    #logo {
+        width: 300px;
+    }
+}
