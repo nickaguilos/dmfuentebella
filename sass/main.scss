@@ -1,3 +1,8 @@
+$border: #ccc;
+$copycolor: #222;
+$fuentebellaBlue: #040094;
+$fuentebellaGreen: #038A04;
+
 body {
     font-family: sans-serif;
     font-size: 18px;
@@ -35,5 +40,36 @@ body {
 
     #logo {
         width: 300px;
+    }
+
+    input, textarea, select {
+        width: 100%;
+        border: 1px solid $border;
+        padding: 0.46875rem 1rem;
+        font-size: 1em;
+        color: $copycolor;
+        line-height: 1.5em;
+        background: #fff;
+        -webkit-appearance: none;
+        margin-bottom: 1em;
+        transition: all, 0.2s;
+
+        &:focus, &:active {
+            outline: none;
+            border: 1px solid #777;
+        }
+
+        &:disabled,{
+            color: #eee;
+        }
+    }
+
+    button, .button {
+        -webkit-appearance: none;
+        font-size: 18px;
+        background-color: #185cc1;
+        color: #fff;
+        padding: 0.5em 1em;
+        border-radius: 5px;
     }
 }
