@@ -69,3 +69,8 @@ body button, body .button {
   padding: 0.5em 1em;
   border-radius: 5px;
 }
+/* line 75, ../sass/main.scss */
+body button:hover, body .button:hover {
+  background-color: #00008a;
+  cursor: pointer;
+}
