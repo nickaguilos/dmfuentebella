@@ -1,0 +1,56 @@
+$pink: #ea4a66;
+
+body {
+	font-family: system-ui;
+	color: #333;
+	line-height: 1.5em;
+}
+
+p {
+	font-family: 'PT serif', serif;
+}
+
+a {
+	color: $pink;
+}
+
+aside {
+	grid-column: 1 / span 2;
+	padding-right: 50px;
+	a {
+		display: block;
+		padding: 1em;
+		text-decoration: none;
+	}
+
+	> div {
+		position: fixed;
+		overflow-y: scroll;
+	}
+}
+
+main {
+	grid-column: 3 / span 4;
+}
+
+.container-fluid {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+}
+
+.highlight, .h {
+	background-color: #f9c9d1;
+	color: #6d2a2a;
+	padding: 5px;
+	font-weight: bold;
+}
+
+.subsection {
+	padding-top: 2em;
+}
+
+#content > article {
+	padding-bottom: 2em;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 2em;
+}
