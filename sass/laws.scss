@@ -14,9 +14,16 @@ a {
 	color: $pink;
 }
 
+img {
+	max-width: 100%;
+}
+
+h2 {
+	text-transform: capitalize;
+}
+
 aside {
 	grid-column: 1 / span 2;
-	padding-right: 50px;
 	a {
 		display: block;
 		padding: 1em;
@@ -26,11 +33,28 @@ aside {
 	> div {
 		position: fixed;
 		overflow-y: scroll;
+		width: 25vw;
+		height: 100vh;
+		padding-bottom: 100px;
 	}
 }
 
 main {
-	grid-column: 3 / span 4;
+	grid-column: 3 / span 5;
+}
+
+#menu-trigger {
+	margin-bottom: 1em;
+	display: none
+}
+.button {
+	display: inline-block;
+	font-weight: bold;
+	color: $pink;
+	border-radius: 3px;
+	border: 2px solid $pink;
+	padding: 0.5em 1em;
+	text-decoration: none;
 }
 
 .container-fluid {
@@ -53,4 +77,45 @@ main {
 	padding-bottom: 2em;
 	border-bottom: 1px solid #ccc;
 	margin-bottom: 2em;
+}
+
+@media screen and (max-width: 700px) {
+	main {
+		grid-column: 1 / span 7;
+		padding-top: 30px;
+	}
+
+	#menu-trigger-wrapper {
+		display: block;
+		position: fixed;
+		padding: 10px;
+		text-align: center;
+		width: 95vw;
+		background-color: white;
+		top: 0;
+		left: 0;
+
+		#menu-trigger {
+			display: block;
+		}
+
+	}
+
+	aside {
+		display: none;
+		background-color: #fff;
+		grid-column: 1 / span 7;
+
+		> div {
+			position: static;
+			width: 100vw;
+		}
+
+		&.active {
+			position: fixed;
+			width: 100vw;
+			z-index: 2;
+			display: block;
+		}
+	}
 }
