@@ -4,6 +4,12 @@ body {
 	font-family: system-ui;
 	color: #333;
 	line-height: 1.5em;
+
+	&.darkmode {
+		background-color: #2d303e;
+		$pink: #bb7481;
+		color: #988080;
+	}
 }
 
 p {
@@ -41,6 +47,10 @@ aside {
 
 main {
 	grid-column: 3 / span 5;
+}
+
+nav {
+	padding-bottom: 100px;
 }
 
 #menu-trigger {
@@ -83,6 +93,12 @@ main {
 	main {
 		grid-column: 1 / span 7;
 		padding-top: 30px;
+	}
+
+	body.darkmode {
+		#menu-trigger-wrapper, aside {
+			background-color: #2d303e;
+		}
 	}
 
 	#menu-trigger-wrapper {

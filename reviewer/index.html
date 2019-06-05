@@ -32,6 +32,10 @@
 					<a href="#economic-commerce">Economic Laws - Commerce, Services, Economic Zones</a>
 					<a href="#infrastructure">Infrastructural Laws</a>
 					<a href="#international-covenants">International Covenants</a>
+
+					<div>
+						<a href="" id="toggleDarkMode" class="button">Toggle Dark Mode</a>
+					</div>
 				</nav>
 			</div>
 		</aside>
@@ -761,6 +765,13 @@
 			$('aside nav a').on('click', function(e){
 				$('aside').removeClass('active');
 			});
+
+			var darkMode = $("#toggleDarkMode");
+
+			darkMode.on('click', function(x){
+				x.preventDefault();
+				$('body').toggleClass('darkmode');
+			})
 		});
 	</script>
 </body>
